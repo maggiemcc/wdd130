@@ -1,6 +1,6 @@
 :root {
     --primary-color: rgb(9, 0, 101);
-    --secondary-color: rgb(0, 135, 225);
+    --secondary-color: rgb(48, 118, 189);
     --accent-color: #fff;
     --body-font-color: #000;
     --heading-font: Marker Felt, fantasy;
@@ -93,7 +93,11 @@ article {
     float: right;
     width: 200px;
     border-radius: 0 15px 15px 0;
+}
 
+footer {
+    text-align: center;
+    border-top: 2px solid var(--primary-color)
 }
 
 .socialmedia a {
