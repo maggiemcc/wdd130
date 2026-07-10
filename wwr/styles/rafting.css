@@ -3,7 +3,7 @@
     --secondary-color: rgb(0, 135, 225);
     --accent-color: #fff;
     --body-font-color: #000;
-    --heading-font: "Phudu", sans-serif;
+    --heading-font: Marker Felt, fantasy;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
@@ -28,6 +28,10 @@ body {
 header {
     background-color: var(--primary-color);
     color: var(--accent-color);
+}
+
+header img {
+    max-width: 120px;
 }
 
 header a {
@@ -62,8 +66,8 @@ article {
     height: auto;
 }
 
-h1,
-article {
+.hero h1,
+.hero article {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -81,7 +85,7 @@ article {
 
 }
 
-article {
+.hero article {
     width: auto;
     top: auto;
     bottom: 20px;
