@@ -82,7 +82,6 @@ article {
     bottom: 20px;
     width: auto;
     padding: 15px;
-    text-align: center;
     opacity: 0.83;
     background-color: var(--secondary-color);
     color: var(--accent-color);
@@ -102,4 +101,5 @@ footer {
 
 .socialmedia a {
     text-decoration: none;
+    margin: 0 5px;
 }
