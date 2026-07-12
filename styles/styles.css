@@ -16,27 +16,47 @@
     box-sizing: border-box;
 }
 
+header,
+footer,
+.grid {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     color: white;
     display: block;
     padding: 20px;
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
-    max-width: 700px;
-    margin: var(--margin);
+    margin: 1rem;
     padding: var(--padding);
+    grid-column: 2/3;
 }
 
 h1 {
     font-family: var(--font-family);
     color: darkblue;
-    padding-bottom: var(--padding);
+    margin-bottom: var(--padding);
+    border-bottom: 2px solid darkblue;
+    padding-bottom: 5px;
+    grid-column-start: span 1;
 }
 
 main img {
@@ -56,9 +76,12 @@ p {
 }
 
 aside {
-    width: 15rem;
+    width: 20rem;
     text-align: center;
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: auto;
 }
 
 aside h2 {
@@ -66,7 +89,7 @@ aside h2 {
     font-size: 2.3rem;
     position: absolute;
     top: 20px;
-    left: 110px;
+    left: 150px;
     color: #c3632c;
 }
 
@@ -74,6 +97,10 @@ aside img {
     width: 200px;
     height: var(--height);
     border-radius: var(--border-radius);
+}
+
+aside p {
+    margin: 2% 0;
 }
 
 footer {
@@ -84,8 +111,8 @@ footer {
 }
 
 /* Class Selectors */
+.temples,
 .box {
-    margin: var(--margin);
     padding: var(--padding);
     border: var(--border);
     border-radius: var(--border-radius);
@@ -93,7 +120,9 @@ footer {
     color: var(--text-color);
 }
 
-main .box {
-    max-width: 450px;
+.temples {
+    width: auto;
     padding: 1.3rem;
+    height: 100%;
+    margin: 2% 0;
 }
