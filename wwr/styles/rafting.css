@@ -1,6 +1,6 @@
 :root {
     --primary-color: rgb(7, 0, 87);
-    --secondary-color: #d7c9a4;
+    --secondary-color: rgba(215, 201, 164, 0.75);
     --accent-color: #fff;
     --body-font-color: #000;
     --heading-font: Marker Felt, fantasy;
@@ -87,7 +87,7 @@ nav ul {
     width: 100%;
     padding: 15px;
     text-align: center;
-    background-color: rgba(215, 201, 164, 0.75);
+    background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 
@@ -96,9 +96,8 @@ nav ul {
     bottom: 10px;
     width: auto;
     padding: 15px;
-    opacity: .95;
-    background-color: var(--secondary-color);
-    color: var(--body-font-color);
+    background-color: rgba(7, 0, 87, 0.85);
+    color: var(--accent-color);
     border-radius: 20px;
 }
 
