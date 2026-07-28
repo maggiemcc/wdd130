@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggie McCausland | WDD 130</title>
+    <meta name="description" content="W05 Learning activity: HTML Forms">
+    <meta name="author" content="Maggie McCausland">
+    <link rel="stylesheet" href="styles/poll-form.css">
+</head>
+
+<body>
+    <header>
+        <h1>WDD 130 - HTML Forms - User Poll</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+
+                <legend>Contact Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="useremail">Email:</label>
+                <input type="email" id="useremail" name="useremail" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Questions</legend>
+                <label for="browser">What's your favorite browser:</label>
+                <select name="browser" id="browser">
+                    <option value="Chrome">Chrome</option>
+                    <option value="Safari">Safari</option>
+                    <option value="Brave">Brave</option>
+                    <option value="Edge">Edge</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <section class="pet">
+                    <label for="pet">Do you have a household pet?</label>
+                    <input type="checkbox" id="pet" name="pet">
+                </section>
+
+                <label for="feedback">List the places you have lived:</label>
+                <textarea id="feedback" name="feedback" rows="4"
+                  placeholder="Springville, Utah"></textarea>
+
+                <button type="submit">Submit Poll</button>
+            </fieldset>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>©2026 | Maggie McCausland | Springville, Utah</p>
+    </footer>
+</body>
+
+</html>
