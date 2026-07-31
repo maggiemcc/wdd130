@@ -211,10 +211,11 @@ label,
 input,
 select,
 button,
-form h6 {
+form h3 {
     font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
     margin: .3rem;
+    font-size: .8rem;
 
 }
 
