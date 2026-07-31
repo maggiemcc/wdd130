@@ -164,10 +164,19 @@ section img {
     text-align: center;
 }
 
-.company-info h1 {
+.company-info h1,
+.company-info h2 {
     background-color: var(--accent-color);
     color: var(--primary-color);
     margin-bottom: auto;
+}
+
+.company-info h2 {
+    font-family: var(--body-font);
+    color: var(--body-font-color);
+    font-size: 1rem;
+    margin: auto;
+    padding: .2rem;
 }
 
 .map-form {
