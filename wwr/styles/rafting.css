@@ -52,6 +52,10 @@ h2 {
     padding: 1rem;
 }
 
+h2 {
+    margin: 1rem 0;
+}
+
 nav,
 p,
 section,
@@ -89,6 +93,28 @@ nav ul {
     text-align: center;
     background-color: var(--secondary-color);
     color: var(--primary-color);
+}
+
+.alternate-hero img {
+    display: flex;
+    flex-wrap: wrap;
+    object-fit: cover;
+    height: 300px;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.alternate-hero h1 {
+    top: 100px;
+    padding: 40px;
 }
 
 .hero article {
@@ -144,7 +170,8 @@ section img {
 }
 
 .adventure figure img,
-.employees figure img {
+.employees figure img,
+.all-trips img {
     display: flex;
     flex-wrap: wrap;
     object-fit: cover;
@@ -269,12 +296,58 @@ button:hover {
     grid-template-columns: 1fr auto;
 }
 
+/* TRIPS PAGE */
+.all-trips {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+}
+
+.trip {
+    border: 1px solid var(--primary-color);
+    border-radius: .5rem;
+}
+
+.all-trips h2 {
+    margin: 0;
+    border-radius: .5rem .5rem 0 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.trip-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: end;
+    background-color: var(--secondary-color);
+    border-radius: 0 0 .5rem .5rem;
+    font-weight: 700;
+}
+
+.trip-info > :first-child {
+    grid-column: span 2;
+    text-align: left;
+    font-weight: 500;
+    background-color: var(--accent-color);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    object-fit: cover;
+}
+
+.all-trips img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 footer {
     text-align: center;
     border-top: 5px solid var(--primary-color);
     display: grid;
     place-items: center;
     grid-template-columns: 70% auto;
+    margin-top: 2rem;
 }
 
 .socialmedia a {
