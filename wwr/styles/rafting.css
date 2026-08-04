@@ -54,6 +54,7 @@ h2 {
 
 h2 {
     margin: 1rem 0;
+    border-radius: .5rem;
 }
 
 nav,
@@ -79,17 +80,22 @@ nav ul {
     position: relative;
 }
 
+img {
+    border-radius: .5rem;
+}
+
 .hero img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 0 0 .5rem .5rem;
 }
 
 .hero h1 {
     position: absolute;
-    top: 20px;
+    top: 40px;
     width: 100%;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -102,19 +108,9 @@ nav ul {
     height: 300px;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-}
-
 .alternate-hero h1 {
     top: 100px;
-    padding: 40px;
+    padding: 20px;
 }
 
 .hero article {
@@ -149,7 +145,12 @@ section img {
     margin: auto;
 }
 
+.adventures {
+    display: block;
+}
+
 .adventure,
+.trips,
 .employees {
     display: flex;
     flex-wrap: wrap;
@@ -163,15 +164,17 @@ section img {
     width: 100%;
 }
 
+.trips figure,
 .adventure figure,
 .employees figure {
     margin: auto;
     margin-top: 2%;
 }
 
+.trips figure img,
 .adventure figure img,
 .employees figure img,
-.all-trips img {
+.trip img {
     display: flex;
     flex-wrap: wrap;
     object-fit: cover;
@@ -179,6 +182,7 @@ section img {
     height: 150px;
 }
 
+.trips figcaption,
 .adventure figcaption,
 .employees figcaption {
     margin-top: 2%;
@@ -238,18 +242,19 @@ label,
 input,
 select,
 button,
-form h3 {
+form h3,
+.contact-button {
     font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
     margin: .3rem;
     font-size: .8rem;
-
 }
 
 textarea,
 select,
 input,
-button {
+button,
+.contact-button {
     padding: .5rem;
     font-size: 1.1rem;
 }
@@ -267,7 +272,8 @@ input[type="checkbox"] {
     margin-right: 1rem;
 }
 
-button {
+button,
+.contact-button {
     background-color: var(--primary-color);
     color: white;
     font-weight: 700;
@@ -278,9 +284,18 @@ button {
     max-width: 500px;
 }
 
-button:hover {
+button:hover,
+.contact-button:hover {
     cursor: pointer;
     background-color: blue;
+}
+
+.contact-button {
+    text-decoration: none;
+    width: fit-content;
+    line-height: normal;
+    text-align: center;
+    margin: auto;
 }
 
 .column1 {
@@ -297,48 +312,82 @@ button:hover {
 }
 
 /* TRIPS PAGE */
-.all-trips {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
+.trips {
+    display: flex;
+    flex-wrap: wrap;
     gap: .5rem;
 }
 
-.trip {
-    border: 1px solid var(--primary-color);
-    border-radius: .5rem;
-}
-
-.all-trips h2 {
+.trip h2 {
     margin: 0;
     border-radius: .5rem .5rem 0 0;
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 
-.trip-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: end;
-    background-color: var(--secondary-color);
-    border-radius: 0 0 .5rem .5rem;
-    font-weight: 700;
+.trip {
+    border: 1px solid var(--primary-color);
+    border-radius: .5rem;
+    width: 260px;
+    margin: auto;
 }
 
-.trip-info > :first-child {
-    grid-column: span 2;
-    text-align: left;
-    font-weight: 500;
-    background-color: var(--accent-color);
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    object-fit: cover;
-}
-
-.all-trips img {
+.trip img {
     width: 100%;
     margin: 0;
     padding: 0;
+    border-radius: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+th,
+td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+    text-align: center;
+}
+
+thead th,
+tfoot tr {
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+}
+
+.prep {
+    display: block;
+}
+
+.prep table {
+    margin: auto;
+    width: 100%;
+}
+
+.prep thead tr th {
+    background-color: var(--primary-color);
+}
+
+.questions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.questions-contact {
+    text-align: center;
+    margin: auto;
+}
+
+.questions img {
+    border-radius: .5rem;
 }
 
 footer {
