@@ -54,7 +54,7 @@ h2 {
 
 h2 {
     margin: 1rem 0;
-    border-radius: .5rem;
+    border-radius: .5rem .5rem 0 0;
 }
 
 nav,
@@ -364,6 +364,8 @@ tfoot tr {
 
 .prep {
     display: block;
+    margin: auto;
+    padding: 1rem;
 }
 
 .prep table {
@@ -392,11 +394,14 @@ tfoot tr {
 
 footer {
     text-align: center;
-    border-top: 5px solid var(--primary-color);
+    /* border-top: 5px solid var(--primary-color); */
     display: grid;
     place-items: center;
     grid-template-columns: 70% auto;
     margin-top: 2rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border-radius: .5rem .5rem 0 0;
 }
 
 .socialmedia a {
@@ -406,4 +411,10 @@ footer {
 
 .socialmedia a img {
     width: 40px;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
 }
