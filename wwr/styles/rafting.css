@@ -156,7 +156,7 @@ iframe,
 .adventure img,
 .employees img,
 .questions img {
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .adventures {
@@ -183,6 +183,8 @@ iframe,
 .employees figure {
     margin: auto;
     margin-top: 2%;
+    width: 150px;
+    height: 210px;
 }
 
 .trips figure img,
@@ -192,19 +194,29 @@ iframe,
     display: flex;
     flex-wrap: wrap;
     object-fit: cover;
-    width: 150px;
     height: 150px;
+    width: 100%;
+}
+
+.employees img,
+.adventure img {
+    border-radius: .5rem .5rem 0 0;
 }
 
 .trips figcaption,
 .adventure figcaption,
 .employees figcaption {
-    margin-top: 2%;
     text-align: center;
-    font-weight: lighter;
     font-family: var(--heading-font);
-    margin-top: .6rem;
+    background-color: var(--secondary-color);
     color: var(--primary-color);
+    margin-top: .6rem;
+    border-radius: 0 0 .5rem .5rem;
+    padding: .5rem 1rem;
+}
+
+.adventure figcaption {
+    min-height: 56px;
 }
 
 /* CONTACT PAGE */
