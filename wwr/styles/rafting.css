@@ -55,6 +55,7 @@ h2 {
 h2 {
     margin: 1rem 0;
     border-radius: .5rem .5rem 0 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav,
@@ -105,6 +106,7 @@ img {
     text-align: center;
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .alternate-hero img {
@@ -117,6 +119,21 @@ img {
 .alternate-hero h1 {
     top: 100px;
     padding: 20px;
+}
+
+.alternate-hero p {
+    position: absolute;
+    bottom: 65px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-family: var(--heading-font);
+    color: white;
+    background-color: rgba(7, 0, 87, 0.75);
+    padding: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    /* left: 10%; */
+
 }
 
 .hero article {
@@ -219,6 +236,10 @@ iframe,
     min-height: 56px;
 }
 
+.trip h2 {
+    box-shadow: none;
+}
+
 /* CONTACT PAGE */
 .company-info {
     display: block;
@@ -230,6 +251,7 @@ iframe,
     background-color: var(--accent-color);
     color: var(--primary-color);
     margin-bottom: auto;
+    box-shadow: none;
 }
 
 .company-info h2 {
@@ -240,7 +262,8 @@ iframe,
     padding: .2rem;
 }
 
-.map-form {
+.map-form,
+.signup-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -264,6 +287,22 @@ form {
     display: grid;
     border: none;
     align-items: center;
+}
+
+.signup-form {
+    display: block;
+    text-align: center;
+}
+
+.signup-form .form-item {
+    max-width: 500px;
+    margin: .5rem auto;
+}
+
+.signup-form button {
+    margin: .5rem auto;
+    text-align: center;
+    max-width: 300px;
 }
 
 textarea,
