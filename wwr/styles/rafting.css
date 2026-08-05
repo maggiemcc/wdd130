@@ -76,6 +76,12 @@ nav ul {
     list-style-type: none;
 }
 
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
 .hero {
     position: relative;
 }
@@ -145,6 +151,14 @@ section img {
     margin: auto;
 }
 
+iframe,
+.history img,
+.adventure img,
+.employees img,
+.questions img {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 .adventures {
     display: block;
 }
@@ -187,6 +201,10 @@ section img {
 .employees figcaption {
     margin-top: 2%;
     text-align: center;
+    font-weight: lighter;
+    font-family: var(--heading-font);
+    margin-top: .6rem;
+    color: var(--primary-color);
 }
 
 /* CONTACT PAGE */
@@ -213,21 +231,20 @@ section img {
 .map-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 1rem .5rem;
-    gap: .8rem;
+    gap: 1rem;
 }
 
 iframe {
     width: 100%;
     height: 100%;
     border: none;
+    border-radius: .5rem;
 }
 
 form {
     width: 100%;
     margin: 0 auto;
     padding: .5rem;
-    border-radius: .5rem;
     display: grid;
 }
 
@@ -288,6 +305,9 @@ button:hover,
 .contact-button:hover {
     cursor: pointer;
     background-color: blue;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+
 }
 
 .contact-button {
@@ -296,6 +316,7 @@ button:hover,
     line-height: normal;
     text-align: center;
     margin: auto;
+    text-decoration: none;
 }
 
 .column1 {
@@ -411,10 +432,4 @@ footer {
 
 .socialmedia a img {
     width: 40px;
-}
-
-.active {
-    font-weight: bold;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
 }
