@@ -440,18 +440,19 @@ button:hover,
     border-radius: 0;
 }
 
+.prep {
+    display: block;
+    margin: var(--margin-main);
+    padding: 1rem;
+}
+
 table {
+    margin: var(--margin-main);
+    width: var(--width-main);
     border-collapse: collapse;
     border: 2px solid var(--primary-color);
     font-size: 0.8rem;
     letter-spacing: 1px;
-}
-
-th,
-td {
-    border: 1px solid rgb(160 160 160);
-    padding: 8px 10px;
-    text-align: center;
 }
 
 thead th,
@@ -461,19 +462,16 @@ tfoot tr {
     font-weight: 700;
 }
 
-.prep {
-    display: block;
-    margin: var(--margin-main);
-    padding: 1rem;
-}
-
-.prep table {
-    margin: var(--margin-main);
-    width: var(--width-main);
-}
-
-.prep thead tr th {
+thead tr th {
     background-color: var(--primary-color);
+}
+
+th,
+td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+    text-align: center;
+    padding: .5rem;
 }
 
 .questions {
