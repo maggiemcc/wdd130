@@ -22,7 +22,7 @@ footer {
 
 body {
     font-family: var(--body-font);
-    color: var(--body-font-color)
+    color: var(--body-font-color);
 }
 
 header {
@@ -172,7 +172,8 @@ iframe,
 .history img,
 .adventure img,
 .employees img,
-.questions img {
+.questions img,
+.offer img {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -295,8 +296,13 @@ form {
 }
 
 .signup-form .form-item {
-    max-width: 500px;
+    max-width: 400px;
     margin: .5rem auto;
+}
+
+.signup-form p,
+.signup-form label {
+    font-size: 1.3rem;
 }
 
 .signup-form button {
@@ -311,7 +317,8 @@ input,
 select,
 button,
 form h3,
-.contact-button {
+.contact-button,
+.trips-button {
     font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
     margin: .3rem;
@@ -322,7 +329,8 @@ textarea,
 select,
 input,
 button,
-.contact-button {
+.contact-button,
+.trips-button {
     padding: .5rem;
     font-size: 1.1rem;
 }
@@ -341,7 +349,8 @@ input[type="checkbox"] {
 }
 
 button,
-.contact-button {
+.contact-button,
+.trips-button {
     background-color: var(--primary-color);
     color: white;
     font-weight: 700;
@@ -353,15 +362,14 @@ button,
 }
 
 button:hover,
-.contact-button:hover {
+.contact-button:hover,
+.trips-button:hover {
     cursor: pointer;
     background-color: blue;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-
 }
 
-.contact-button {
+.contact-button,
+.trips-button {
     text-decoration: none;
     width: fit-content;
     line-height: normal;
@@ -462,6 +470,53 @@ tfoot tr {
 
 .questions img {
     border-radius: .5rem;
+}
+
+/* HOME PAGE */
+.offerings {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.offerings h2 {
+    width: 100%;
+}
+
+.offer h3 {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    place-items: center;
+    width: 100%;
+    margin: auto;
+    font-family: var(--heading-font);
+    background-color: var(--secondary-color);
+    height: 100%;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.offer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    /* border-bottom: 2px solid var(--primary-color); */
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.offer img {
+    width: 100%;
+    max-width: max-content;
+}
+
+.trips-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
 }
 
 footer {
