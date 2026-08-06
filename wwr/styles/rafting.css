@@ -5,6 +5,11 @@
     --body-font-color: #000;
     --heading-font: Marker Felt, fantasy;
     --body-font: Arial, Helvetica, sans-serif;
+    --grid-layout: repeat(2, 1fr);
+    --border-radius-top: .5rem .5rem 0 0;
+    --border-radius-bottom: 0 0 .5rem .5rem;
+    --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    --margin-main: auto;
 }
 
 * {
@@ -26,12 +31,12 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
     display: grid;
     place-items: center;
     grid-template-columns: 30% auto;
     padding: 10px 0;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 header img {
@@ -54,10 +59,11 @@ h2 {
 
 h2 {
     margin: 1rem 0;
-    border-radius: .5rem .5rem 0 0;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: var(--border-radius-top);
+    box-shadow: var(--box-shadow);
 }
 
+/* NAV */
 nav,
 p,
 section,
@@ -83,6 +89,7 @@ nav ul {
     text-underline-offset: 1rem;
 }
 
+/* HERO */
 .hero {
     position: relative;
 }
@@ -95,7 +102,7 @@ img {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 0 0 .5rem .5rem;
+    border-radius: var(--border-radius-bottom);
 }
 
 .hero h1 {
@@ -106,7 +113,7 @@ img {
     text-align: center;
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
 }
 
 .alternate-hero img {
@@ -128,12 +135,10 @@ img {
     width: 100%;
     text-align: center;
     font-family: var(--heading-font);
-    color: white;
+    color: var(--accent-color);
     background-color: rgba(7, 0, 87, 0.75);
     padding: 1rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    /* left: 10%; */
-
+    box-shadow: var(--box-shadow);
 }
 
 .hero article {
@@ -152,10 +157,11 @@ img {
     border-radius: 0 15px 15px 0;
 }
 
+/* MAIN */
 section {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    margin: auto;
+    margin: var(--margin-main);
 }
 
 section h2 {
@@ -165,7 +171,7 @@ section h2 {
 
 section img {
     max-width: 300px;
-    margin: auto;
+    margin: var(--margin-main);
 }
 
 iframe,
@@ -174,7 +180,7 @@ iframe,
 .employees img,
 .questions img,
 .offer img {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
 }
 
 .adventures {
@@ -188,7 +194,7 @@ iframe,
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin: auto;
+    margin: var(--margin-main);
 }
 
 .adventure h2,
@@ -199,7 +205,7 @@ iframe,
 .trips figure,
 .adventure figure,
 .employees figure {
-    margin: auto;
+    margin: var(--margin-main);
     margin-top: 2%;
     width: 150px;
     height: 210px;
@@ -218,7 +224,7 @@ iframe,
 
 .employees img,
 .adventure img {
-    border-radius: .5rem .5rem 0 0;
+    border-radius: var(--border-radius-top);
 }
 
 .trips figcaption,
@@ -229,7 +235,7 @@ iframe,
     background-color: var(--secondary-color);
     color: var(--primary-color);
     margin-top: .6rem;
-    border-radius: 0 0 .5rem .5rem;
+    border-radius: var(--border-radius-bottom);
     padding: .5rem 1rem;
 }
 
@@ -259,14 +265,14 @@ iframe,
     font-family: var(--body-font);
     color: var(--body-font-color);
     font-size: 1rem;
-    margin: auto;
+    margin: var(--margin-main);
     padding: .2rem;
 }
 
 .map-form,
 .signup-form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: var(--grid-layout);
     gap: 1rem;
 }
 
@@ -374,7 +380,7 @@ button:hover,
     width: fit-content;
     line-height: normal;
     text-align: center;
-    margin: auto;
+    margin: var(--margin-main);
     text-decoration: none;
 }
 
@@ -392,7 +398,6 @@ button:hover,
 }
 
 /* TRIPS PAGE */
-
 .trips {
     display: flex;
     flex-wrap: wrap;
@@ -401,7 +406,7 @@ button:hover,
 
 .trip h2 {
     margin: 0;
-    border-radius: .5rem .5rem 0 0;
+    border-radius: var(--border-radius-top);
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
@@ -410,7 +415,9 @@ button:hover,
     border: 1px solid var(--primary-color);
     border-radius: .5rem;
     width: 260px;
-    margin: auto;
+    margin: var(--margin-main);
+    height: 100%;
+    min-height: 390px;
 }
 
 .trip img {
@@ -422,8 +429,7 @@ button:hover,
 
 table {
     border-collapse: collapse;
-    border: 2px solid rgb(140 140 140);
-    font-family: sans-serif;
+    border: 2px solid var(--primary-color);
     font-size: 0.8rem;
     letter-spacing: 1px;
 }
@@ -437,19 +443,19 @@ td {
 
 thead th,
 tfoot tr {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--body-font-color);
+    color: var(--accent-color);
     font-weight: 700;
 }
 
 .prep {
     display: block;
-    margin: auto;
+    margin: var(--margin-main);
     padding: 1rem;
 }
 
 .prep table {
-    margin: auto;
+    margin: var(--margin-main);
     width: 100%;
 }
 
@@ -459,13 +465,13 @@ tfoot tr {
 
 .questions {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: var(--grid-layout);
     width: 100%;
 }
 
 .questions-contact {
     text-align: center;
-    margin: auto;
+    margin: var(--margin-main);
 }
 
 .questions img {
@@ -483,30 +489,42 @@ tfoot tr {
     width: 100%;
 }
 
-.offer h3 {
+.offer h3,
+.adventure figcaption,
+.employees figcaption {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     place-items: center;
     width: 100%;
-    margin: auto;
+    margin: var(--margin-main);
     font-family: var(--heading-font);
     background-color: var(--secondary-color);
     height: 100%;
     text-align: center;
     border-radius: .5rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
+}
+
+.adventure figcaption,
+.employees figcaption {
+    height: 56px;
+    margin-top: 1rem;
+    border-radius: var(--border-radius-bottom);
 }
 
 .offer {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: var(--grid-layout);
     gap: 1rem;
-    /* border-bottom: 2px solid var(--primary-color); */
-    margin: auto;
+    margin: var(--margin-main);
     padding: 1rem;
     text-align: center;
+}
+
+.offer h3 {
+    padding: .5rem;
 }
 
 .offer img {
@@ -519,16 +537,16 @@ tfoot tr {
     padding: 1rem 2rem;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
-    /* border-top: 5px solid var(--primary-color); */
     display: grid;
     place-items: center;
     grid-template-columns: 70% auto;
     margin-top: 2rem;
     background-color: var(--primary-color);
     color: var(--accent-color);
-    border-radius: .5rem .5rem 0 0;
+    border-radius: var(--border-radius-top);
 }
 
 .socialmedia a {
