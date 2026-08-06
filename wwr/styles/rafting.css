@@ -245,10 +245,6 @@ iframe,
     min-height: 56px;
 }
 
-.trip h2 {
-    box-shadow: none;
-}
-
 /* CONTACT PAGE */
 .company-info {
     display: block;
@@ -398,7 +394,6 @@ button:hover,
     line-height: normal;
     text-align: center;
     margin: var(--margin-main);
-    text-decoration: none;
 }
 
 .column1 {
@@ -426,6 +421,7 @@ button:hover,
     border-radius: var(--border-radius-top);
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    box-shadow: none;
 }
 
 .trip {
